@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon / badge</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M16.1471671,16.9725624 L8.49842207,11.6620518 L0.85,16.9725624 L0.85,14.3174686 L8.48156167,9.00695803 L16.1471671,14.3174686 L16.1471671,16.9725624 Z M16.1471671,12.4698731 L8.49842207,7.15936246 L0.85,12.4698731 L0.85,9.81452086 L8.48156167,4.50401026 L16.1471671,9.81452086 L16.1471671,12.4698731 Z M16.1471671,7.96673149 L8.49842207,2.6562209 L0.85,7.96673149 L0.85,5.31157309 L8.48156167,0.0010625 L16.1471671,5.31157309 L16.1471671,7.96673149 Z" id="path-1"></path>
+    </defs>
+    <g id="Order-Flow-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-707.000000, -299.000000)">
+        <g id="progress-tracker" transform="translate(-2.000000, 283.000000)">
+            <g id="Group" transform="translate(325.000000, 0.000000)">
+                <g id="icon-/-badge" transform="translate(384.000000, 16.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Combined-Shape" fill="#B793DA" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <g id="color/secondary-/-gold" mask="url(#mask-2)" fill="#C7BE7E" fill-rule="evenodd">
+                        <rect id="purple" x="0" y="0" width="17" height="17"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

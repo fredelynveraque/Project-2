@@ -1,0 +1,110 @@
+// Rem with Pixel Fallback
+// ==========================================================================
+@mixin rem($property, $values) {
+  $font-size: 16px;
+  $px-values: ();
+  $rem-values: ();
+
+  @each $value in $values {
+    @if $value == 0 or $value == 0px {
+      $px-values: join($px-values, 0);
+      $rem-values: join($rem-values, 0);
+    }
+
+    @else if type-of($value) == number and not unitless($value) and unit($value) == px {
+      $new-rem-value: $value / $font-size;
+      $px-values: join($px-values, round($value));
+      $rem-values: join($rem-values, #{$new-rem-value}rem);
+    }
+
+    @else if type-of($value) == number and not unitless($value) and unit($value) == "%" {
+      $px-values: join($px-values, #{$value});
+      $rem-values: join($rem-values, #{$value});
+    }
+
+    @else if $value == auto {
+      $px-values: join($px-values, auto);
+      $rem-values: join($rem-values, auto);
+    }
+
+    @else {
+      $px-values: join($px-values, round($value * $font-size));
+      $rem-values: join($rem-values, #{$value}rem);
+    }
+  }
+
+  #{$property}: $rem-values;
+}
+
+@mixin circle($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// webkit appearance
+
+@mixin webkit-appearance($webkit-appearance){
+  -webkit-appearance: $webkit-appearance;
+  -moz-appearance:$webkit-appearance;
+  -o-appearance:$webkit-appearance;
+  appearance:$webkit-appearance;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// input placeholder
+
+@mixin placeholder($placeholder-color){
+  ::-webkit-input-placeholder{
+    color: $placeholder-color;
+  }
+  ::-moz-placeholder{
+    color: $placeholder-color;
+  }
+  :-ms-input-placeholder{
+    color: $placeholder-color;
+  }
+  :-moz-placeholder{
+    color: $placeholder-color;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin box-shadow($box-shadow) {
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  -ms-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}
+
+@mixin border-radius-top($radius) {
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-top-left-radius: $radius;
+  -ms-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-top-right-radius: $radius;
+  -ms-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+}

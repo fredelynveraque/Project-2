@@ -1,0 +1,155 @@
+.progress-status-bar {
+  @include media-breakpoint-only(xs) {
+    padding-top: 70px !important;
+    padding-bottom: 0 !important;
+  }
+  padding: 60px 0 !important;
+  padding-bottom:20px !important;
+  box-shadow: 0 6px 5px -6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 6px 5px -6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 6px 5px -6px rgba(0, 0, 0, 0.1);
+  -ms-shadow: 0 6px 5px -6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 100%;
+  background: #fff;
+  position: relative;
+  .progress-track{
+    position: relative;
+    margin: auto;
+    width: 100%;
+
+    .row{
+      margin: 0;
+      .col-md{
+        padding: 0;
+        @include media-breakpoint-only(xs) {
+              padding-bottom: 30px;
+        }
+        &:nth-child(1),
+        &:nth-child(2){
+          .status-tracker{
+            &:after{
+              background: rgba(151, 151, 151, 0.15);
+              width: 100%;
+              display: block;
+              height: 1px;
+              content: "";
+              position: absolute;
+              top: 0;
+              position: absolute;
+              top: 0;
+              right: -172px;
+              @include media-breakpoint-only(xs) {
+                background:transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .status-tracker{
+      //border-top: 1px solid  rgba(151, 151, 151, 0.15);
+      .circle{
+        background: #fff;
+        border: 2px solid #C7BE7E;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top:-25px;
+        margin: auto;
+        z-index:1;
+
+        i{
+          display: block;
+          text-align: center;
+          margin: auto;
+          position: relative;
+
+          &.pencil-icon{
+            background:url(/assets/img/pencil.svg) no-repeat;
+            width: 19px;
+            height: 16.78px;
+            top: 15px;
+            left: 2px;
+          }
+
+          &.badge-icon{
+            background:url(/assets/img/badge-gold.svg) no-repeat;
+            width: 17px;
+            height: 17px;
+            top:14px;
+          }
+
+          &.esign-icon{
+            background:url(/assets/img/esign-gold.svg) no-repeat;
+            width: 17px;
+            height: 23px;
+            top:12px;
+          }
+
+        }
+
+        &.active{
+          background: #C7BE7E;
+          border: 2px solid #C7BE7E;
+        }
+      }
+
+      .status-info{
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 200px;
+        margin: auto;
+        h4{
+          font-size: 11px;
+          color: #A0A0A0;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.form-section{
+  background: $brand-bg-inner-color;
+  padding: 90px 0 !important;
+  text-align: left;
+  @include media-breakpoint-only(xs) {
+    padding: 40px 10px !important;
+  }
+    h2 {
+      @include rem(font-size, 26px);
+      margin-bottom: 40px;
+    }
+
+  .field-block{
+      h2 {
+        @include rem(font-size, 20px);
+        border-bottom: 2px dashed #E6E6E6;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        color: #212529;
+        letter-spacing: 0.63px;
+      }
+
+      .accept{
+        color: #999999;
+        font-weight: normal;
+        margin-top: 20px;
+        margin-bottom: 0;
+
+        a{
+          color: #D8162A;
+        }
+      }
+    }
+
+    .width-700{
+      @include media-breakpoint-only(xs) {
+        width:100%;
+      }
+    }
+}

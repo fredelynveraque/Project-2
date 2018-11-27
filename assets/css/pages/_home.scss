@@ -1,0 +1,413 @@
+img {
+  pointer-events: none;
+}
+
+// Positions
+
+.align-center{
+  text-align: center;
+}
+
+
+// Hero
+.hero {
+  background: #0B1337 url(/assets/img/hero-bg.jpg) no-repeat bottom center;
+  background-size: cover;
+  padding:0;
+  height: 550px;
+
+  .container {
+    // Xtra Small Only
+    @include media-breakpoint-only(xs) {
+      max-width: 100%;
+    }
+
+    .col-xl-12{
+          margin: auto 0;
+          text-align: center;
+    }
+  }
+
+  .content {
+    text-align:center;
+    h1 {
+      font-weight: $font-weight-base;
+      color:#fff;
+
+      @include rem(margin-bottom, 60px);
+
+      &.display-4 {
+        @include rem(font-size, 28px);
+            color: rgba(255,255,255,0.9);
+            margin: 30px 10px;
+            font-weight: 600;
+
+        // Medium Up
+        @include media-breakpoint-up(md) {
+          @include rem(font-size, 40px);
+        }
+
+
+        // Large Up
+        @include media-breakpoint-up(lg) {
+          @include rem(font-size, 40px);
+        }
+      }
+    }
+  }
+
+  .btn.text-cta{
+    margin-top:30px;
+    font-size:16px;
+  }
+}
+
+section {
+  @include rem(padding, 52px 0);
+
+  // Large Up
+  @include media-breakpoint-up(lg) {
+    @include rem(padding, 100px 0);
+  }
+
+
+  .section-title {
+    @include rem(margin-bottom, 32px);
+
+    // Large Up
+    @include media-breakpoint-up(lg) {
+      @include rem(margin-bottom, 80px);
+    }
+
+
+    h2 {
+      color:rgba(51,51,51, 1);
+
+      @include rem(font-size, 32px);
+      // Small Down
+      @include media-breakpoint-down(sm) {
+        @include rem(font-size, 24px);
+      }
+    }
+
+    h6 {
+      color:rgba(51,51,51, 0.5);
+      font-weight: 100;
+      @include rem(font-size, 14px);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      // Xtra Small Only
+      @include media-breakpoint-only(xs) {
+        @include rem(font-size, 14px);
+      }
+    }
+
+    &.align-center{
+      text-align: center;
+    }
+
+    &.inner-title{
+      margin-bottom:50px;
+    }
+  }
+}
+
+// Service
+.services {
+  background:#FAFAFA;
+    .btn{
+    margin-top:60px;
+  }
+
+  img {
+    @include rem(padding-bottom, 16px);
+
+    // Large Up
+    @include media-breakpoint-up(lg) {
+      @include rem(padding-bottom, 32px);
+    }
+
+    // Medium Down
+    @include media-breakpoint-down(md) {
+      transform: scale(0.81967);
+      transform-origin: left;
+      width: 120px;
+    }
+  }
+
+  // Medium Down
+  @include media-breakpoint-down(md) {
+    @include rem(padding, 80px);
+
+  }
+
+  // Xtra Small Only
+  @include media-breakpoint-only(xs) {
+    text-align: center;
+    @include rem(padding, 50px 15px);
+  }
+
+  .tabcontent{
+      .pv-art{
+      position:absolute;
+      right:0;
+      top:0;
+    }
+
+    .dating-art{
+      width:359px;
+      height:299px;
+       background: url(/assets/img/dating-art.svg) no-repeat bottom center;
+    }
+
+    .background-investigation-art{
+      width:475px;
+      height:429px;
+      right:-30px;
+       background: url(/assets/img/background-investigation-art.svg) no-repeat bottom center;
+    }
+
+    .drinking-games-art{
+      width:380px;
+      height:427px;
+      background: url(/assets/img/drinking-games-art.svg) no-repeat bottom center;
+    }
+
+    .challenging-friends-art{
+      width:428px;
+      height:378px;
+      background: url(/assets/img/challenging-friends-art.svg) no-repeat bottom center;
+    }
+  }
+}
+
+.services-list{
+  // Medium Down
+  @include media-breakpoint-down(md){
+    @include rem(padding-top, 30px);
+  }
+
+  .content {
+    float: left;
+    @include rem(margin, 0 100px);
+
+
+    h5 {
+      @include rem(margin-bottom, 16px);
+      color:rgba(51,51,51, 0.8);
+    }
+
+    p{
+      color:rgba(51,51,51, 0.6);
+    }
+
+    // Xtra Small
+    @include media-breakpoint-only(xs) {
+      @include rem(padding, 16px 20px);
+    }
+
+
+    // Small Down
+    @include media-breakpoint-down(sm) {
+      @include rem(margin-bottom, 34px);
+      h5 {
+        @include rem(font-size, 18px);
+      }
+
+      p {
+        @include rem(font-size, 14px);
+      }
+    }
+
+
+    // Medium Only
+    @include media-breakpoint-only(lg) {
+      max-width: 90%;
+    }
+
+
+    // Large Up
+    @include media-breakpoint-up(lg) {
+      @include rem(margin-bottom, 64px);
+
+      h5 {
+        @include rem(margin-bottom, 24px);
+        @include rem(font-size, 16px);
+        @include rem(margin-left, 100px);
+      }
+
+      p {
+        @include rem(font-size, 15px);
+        @include rem(margin-left, 100px);
+      }
+    }
+
+
+    // Xtra Large Up
+    @include media-breakpoint-up(xl) {
+      max-width: 100%;
+      @include rem(margin, 0 50px);
+      @include rem(margin-bottom, 50px);
+    }
+
+        // Small Down
+    @include media-breakpoint-down(sm) {
+          margin-bottom:30px !important;
+    }
+
+    img{
+      position: absolute;
+      // Medium Down
+      @include media-breakpoint-down(md) {
+        position: relative;
+        left: 12px;
+      }
+
+      &.custom-img{
+        width: 70px;
+        @include media-breakpoint-down(md) {
+          width: 130px;
+        }
+      }
+    }
+
+    // Large Down
+    @include media-breakpoint-down(lg){
+      width: 100%;
+      @include rem(margin, 0 50px);
+      @include rem(margin-bottom, 50px);
+    }
+
+    // Medium Down
+    @include media-breakpoint-down(md) {
+      margin: 0;
+      @include rem(margin-bottom, 50px);
+      text-align: center;
+    }
+
+    p{
+      font-family: Soleil,sans-serif;
+    }
+  }
+
+  .col-md{
+    &:nth-of-type(odd){
+      text-align: right;
+
+      // Medium Down
+      @include media-breakpoint-down(md) {
+        text-align: left;
+      }
+
+      .content{
+        position: relative;
+        // Large Down
+        @include media-breakpoint-down(lg){
+          @include rem(margin-left, 0);
+        }
+        p{
+          text-align: right;
+          // Medium Down
+          @include media-breakpoint-down(md) {
+            text-align: center;
+          }
+        }
+
+        h5,p{
+          @include rem(padding-right, 100px);
+          margin-left: 0;
+          // Medium Down
+          @include media-breakpoint-down(md) {
+            padding-right: 0;
+          }
+        }
+        img{
+          right: 0;
+          // Medium Down
+          @include media-breakpoint-down(md) {
+            right: inherit;
+            position: relative;
+            left: 12px;
+          }
+
+        }
+      }
+
+    }
+    // Medium Down
+    @include media-breakpoint-down(md) {
+      flex-basis: inherit;
+    }
+  }
+
+  // Large Up
+  @include media-breakpoint-up(lg) {
+    @include rem(padding-top, 30px);
+  }
+}
+ //Let Us Do The Work
+
+.let-us-do-the-work{
+  // Medium Down
+  @include media-breakpoint-down(md) {
+    text-align: center;
+    @include rem(padding, 100px 0);
+    padding-bottom: 0;
+  }
+  @include media-breakpoint-down(sm) {
+    @include rem(padding, 50px 30px);
+  }
+  padding-bottom: 0;
+    h3 {
+      @include rem(font-size, 20px);
+      color:rgba(51,51,51, 0.8);
+    }
+  .content{
+    @include rem(margin-top, 30px);
+    @include media-breakpoint-down(md) {
+      margin-top: 0;
+    }
+    p{
+      line-height:30px;
+      // Large Up
+      @include media-breakpoint-up(lg) {
+        width: 80%;
+        @include rem(padding-top, 20px);
+        @include rem(padding-bottom, 40px);
+      }
+      // Medium Down
+      @include media-breakpoint-down(md) {
+        @include rem(padding-bottom, 40px);
+      }
+    }
+
+    .section-title{
+      // Medium Down
+      @include media-breakpoint-down(md) {
+        @include rem(padding-bottom, 40px);
+      }
+    }
+  }
+  img{
+    position: absolute;
+    bottom: 0;
+    right:0;
+    @include media-breakpoint-down(md) {
+      left:0;
+      margin-top: 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+  }
+
+}
+
+
+.inner-section {
+  h5 {
+    @include rem(margin, 48px 0 16px);
+  }
+}

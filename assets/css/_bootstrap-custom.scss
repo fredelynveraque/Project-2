@@ -1,0 +1,202 @@
+// Typekit Font
+@import url("https://use.typekit.net/unn8zhc.css");
+
+// Bootsrap Variables Overrides
+$font-size-base: 1rem;
+$font-family-sans-serif: "overpass", sans-serif;
+$font-weight-base: 300;
+$font-weight-semibold: 600;
+$link-color: #212529;
+$link-hover-decoration: none;
+
+// Colors
+$primary: $brand-button-color;
+
+// Headings
+$headings-font-weight: $font-weight-semibold;
+$h5-font-size: $font-size-base * 1.375;
+$h6-font-size: $font-size-base * 0.875;
+
+
+//@import "node_modules/bootstrap/scss/bootstrap";
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// @import "node_modules/bootstrap/scss/root";
+// @import "node_modules/bootstrap/scss/print";
+
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+
+// @import "node_modules/bootstrap/scss/images";
+// @import "node_modules/bootstrap/scss/code";
+
+@import "node_modules/bootstrap/scss/grid";
+
+// @import "tables";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/transitions";
+
+@import "node_modules/bootstrap/scss/dropdown";
+// @import "node_modules/bootstrap/scss/button-group";
+
+@import "node_modules/bootstrap/scss/input-group";
+
+@import "node_modules/bootstrap/scss/custom-forms";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/navbar";
+@import "node_modules/bootstrap/scss/card";
+
+// @import "node_modules/bootstrap/scss/breadcrumb";
+// @import "node_modules/bootstrap/scss/pagination";
+// @import "node_modules/bootstrap/scss/badge";
+// @import "node_modules/bootstrap/scss/jumbotron";
+// @import "node_modules/bootstrap/scss/alert";
+// @import "node_modules/bootstrap/scss/progress";
+// @import "node_modules/bootstrap/scss/media";
+// @import "node_modules/bootstrap/scss/list-group";
+// @import "node_modules/bootstrap/scss/close";
+// @import "node_modules/bootstrap/scss/modal";
+// @import "node_modules/bootstrap/scss/tooltip";
+// @import "node_modules/bootstrap/scss/popover";
+// @import "node_modules/bootstrap/scss/carousel";
+
+@import "node_modules/bootstrap/scss/utilities";
+
+// Custom dropdown
+.btn-secondary:not(:disabled):not(.disabled):active
+
+.dropdown{
+  button{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+
+    &.btn{
+      color: $brand-text-color;
+      text-transform: none;
+      letter-spacing:0;
+      font-weight: 200;
+      width: 100%;
+      text-align: left;
+
+      &:hover,
+      &:active{
+        background: transparent;
+        border: none;
+      }
+
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
+
+      &.dropdown-toggle{
+        &::after{
+          right: 0;
+          top:6px;
+          position: absolute;
+        }
+      }
+    }
+
+  }
+
+  .btn-secondary:not(:disabled):not(.disabled):active,
+  .btn-secondary:not(:disabled):not(.disabled).active,
+  .show > .btn-secondary.dropdown-toggle{
+    color: $brand-text-color;
+    text-transform: none;
+    letter-spacing:0;
+    font-weight: 200;
+    width: 100%;
+    text-align: left;
+  }
+
+
+  &.show {
+    > .btn-secondary{
+      &.dropdown-toggle{
+        color: $brand-text-color;
+        text-transform: none;
+        letter-spacing:0;
+        font-weight: 200;
+        width: 100%;
+        text-align: left;
+      }
+    }
+    >.dropdown-menu{
+      display: block;
+    }
+  }
+}
+
+// Custom Buttons
+
+.btn-primary{
+    background-color: #D8162A;
+    border-color: #D8162A;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus{}
+
+.btn-secondary{
+  background-color: transparent;
+  border: none;
+  color: $brand-text-color;
+  &:not(:disabled){
+    &:not(.disabled){
+      &:active{
+        background: transparent;
+        border: none;
+        color: $brand-text-color;
+        &:focus{
+         box-shadow: none;
+        }
+      }
+    }
+  }
+
+  &:hover,
+  &:active{
+    background: transparent;
+    border: none;
+  }
+
+  &:focus{
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.show {
+  > .btn-secondary{
+    &.dropdown-toggle{
+      color: $brand-text-color;
+      text-transform: none;
+      letter-spacing:0;
+      font-weight: 200;
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: 0;
+
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
+  >.dropdown-menu{
+    top: 14px!important;;
+    border: 2px solid #D0D5DF;
+    left: -5%!important;
+    width: 101.3%!important;;
+    @include border-radius-top(0);
+  }
+}
